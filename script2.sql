@@ -1,0 +1,18 @@
+use db3;
+select * from student;
+select student_name,student_age from student where student_age <=18;
+select student_name,student_age from student where student_name ='xyz';
+select student_name,student_age from student where student_age between 18 and 20;
+select student_name,student_age from student where student_age =18 or student_age = 22;
+select student_name,student_age from student where not student_age =20 and not student_age= 22;
+select student_name,student_age from student where student_age in (18,20);
+select student_name,student_age from student where student_name like 'd%';
+select student_name,student_age from student where student_name like '_y%';
+select student_name,student_age from student where student_name like '___';
+select student_name,student_age from student where student_name like '%c';
+select * from student limit 2;
+select  min(student_age) as youngest from student;
+select max(student_age) as oldest from student;
+select count(*) from student where student_age in (18,22);
+select avg(student_age) from student;
+select sum(student_age) from student;
